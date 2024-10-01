@@ -6,11 +6,15 @@
     <title>Basics</title>
   </head>
   <body>
+    <center>
+      <form onsubmit="s()">
+        <label for="name">Enter your name here</label><br />
+        <input type="text" id="name" /><br />
+        <label for="email"> Enter your email address here</label><br />
+        <input type="text" id="email" /><br />
+        <button type="button" onclick="s()">submit</button>
+      </form>
+    </center>
     <script src="./responsive.js"></script>
-    <form onsubmit="s()">
-      <label for="name">Enter your name here</label><br />
-      <input type="text" id="name" />
-      <button type="button" onclick="s()">submit</button>
-    </form>
   </body>
 </html>
