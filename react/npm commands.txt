@@ -1,0 +1,4 @@
+npx create-react-app <name> -> create react app
+nom start - start the development server
+npm run build - bundles app into static files for production
+npm test - starts the test runner
