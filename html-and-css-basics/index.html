@@ -15,36 +15,66 @@
         height: 35px;
         width: 115px;
         border-radius: 4px;
+        transition: opacity 1s; /*takes property and duration as args*/
         margin-right: 10px; /*space b/w objects in page*/
         cursor: pointer; /* changes the cursor to pointer */
       }
+      /* styling the hover */
+      .subscribe:hover {
+        opacity: 0.5;
+        /* transition-duration: 1s; */
+      }
+      /* while the click is active */
+      .subscribe:active {
+        opacity: 0.1;
+      }
 
       .join {
-        color: blue;
+        color: rgb(41, 118, 211);
         background-color: white;
-        border-color: blue;
+        border-color: rgb(41, 118, 211);
         height: 35px;
         border-style: solid;
         width: 60px;
         border-radius: 4px;
         margin-right: 10px;
+        transition: background-color 1s, color 1s; /*we are transitioning two properties*/
       }
+
+      .join:hover {
+        color: white;
+        background-color: rgb(41, 118, 211);
+      }
+
       button.tweet {
         border-radius: 20px;
         color: white;
         background-color: rgb(14, 121, 228);
-        height: 35px;
-        width: 70px;
         border: none;
         font-weight: bold;
         font-size: 15;
+        transition: box-shadow 1s;
+        padding: 8px;
       }
+
+      .tweet:hover {
+        box-shadow: 5px 5px 5px black;
+      }
+
       .uber {
         background-color: black;
         color: white;
-        height: 40px;
-        width: 115px;
+        padding-left: 10px;
+        padding-top: 10px;
+        padding-bottom: 10px;
+        padding-right: 10px;
         margin-left: 8px;
+        transition: padding 1s;
+      }
+
+      .uber:hover {
+        padding-left: 15px;
+        padding-right: 10px;
       }
 
       .amazon {
