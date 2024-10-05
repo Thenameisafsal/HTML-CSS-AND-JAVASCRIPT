@@ -61,11 +61,38 @@
         display: grid;
         grid-template-columns: 50px 1fr;
       }
+      .left-section {
+        display: flex;
+        flex-direction: row;
+      }
+      .header {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+      }
+      .left-section {
+        width: 200px;
+        background-color: lightgreen;
+      }
+      .middle-section {
+        flex: 1;
+        background-color: lightblue;
+        max-width: 700px;
+        /* set the limits to width */
+      }
+      .right-section {
+        width: 300px;
+        background-color: pink;
+      }
     </style>
   </head>
   <body>
-    <div>
-      <input type="text" placeholder="search" />
+    <div class="header">
+      <div class="left-section">left</div>
+      <div class="middle-section">
+        <input type="text" placeholder="search" />
+      </div>
+      <div class="right-section">right</div>
     </div>
     <div
       class="video-container"
