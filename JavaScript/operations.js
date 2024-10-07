@@ -10,3 +10,4 @@ console.log(-true); // -1
 console.log("hello" + true); // hellotrue
 console.log(1 + false); //1
 console.log(1 - false); //1
+console.log(+""); // results in 0 because + will convert it into number
