@@ -31,3 +31,23 @@ const name = null; // typeof will tell this is an object
 const myFunction = function () {
   console.log("hello world");
 };
+
+// primitive data types use stack -> gives you value, original value not affected
+// non primitive datatypes use heap -> gives reference, original values are changed
+// primitive(stack):
+let names = "user";
+let name2 = names;
+name2 = "Afsal"; // since it is a value, original value is not affected
+console.log(names);
+console.log(name2);
+
+// non-primitive(heap)
+let details = {
+  email: "user@google.com",
+  mobile: "1234",
+};
+
+let newDetails = details;
+newDetails.email = "afsal@google.com"; // value modified as reference is passed
+console.log(details.email);
+console.log(newDetails.email);
