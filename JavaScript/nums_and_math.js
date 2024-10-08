@@ -19,3 +19,8 @@ console.log(Math.ceil(4.3));
 console.log(Math.floor(4));
 console.log(Math.floor(4.99));
 console.log(Math.random(100)); // by default between 0 and 1
+
+// to get between a range
+min = 20;
+max = 50;
+console.log(Math.floor(Math.random() * (max - min + 1)) + min); // this formula will make sure the number is within the range always
