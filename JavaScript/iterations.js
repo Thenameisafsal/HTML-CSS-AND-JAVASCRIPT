@@ -37,3 +37,10 @@ for (const k in obj) {
   console.log(k); // prints keys
   console.log(obj[k]); // values
 }
+
+// for each loop
+let v = ["c", "c++", "java", "go", "python", "dart"];
+v.forEach((item) => {
+  console.log(item.toUpperCase());
+});
+console.log(v);
