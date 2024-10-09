@@ -26,3 +26,16 @@ myObj.greetName = function () {
 
 myObj.greeting(); // call the function variable
 myObj.greetName();
+
+let myobj = {
+  name: "afsal",
+};
+console.log(Object.keys(myobj)); // print the keys
+
+// null coalescing operator(??)
+let v = null ?? undefined ?? 10; // 10 will be assigned
+// ternary operator
+let val = v == 10 ? "yes" : "no";
+console.log(val);
+
+if (true) console.log("yo!"), console.log("bro!"); // multiple statements in one line
