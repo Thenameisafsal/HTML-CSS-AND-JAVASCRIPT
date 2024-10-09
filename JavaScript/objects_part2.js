@@ -18,3 +18,14 @@ console.log(obj1); // obj1 is also modified, obj3(result) and obj1(target) refer
 // use this syntax in case you don't want the other objects to be modified
 let obj4 = Object.assign({}, obj1, obj2); // {} is the target, so other objects not modified
 console.log(obj4);
+
+// alternatively we can use the spread operator as well
+let obj5 = { ...obj1, ...obj2 };
+console.log(obj5);
+
+// get all keys of the object
+let v = Object.keys(obj1);
+console.log(v);
+
+// check if a property exists
+console.log(obj1.hasOwnProperty(1));
