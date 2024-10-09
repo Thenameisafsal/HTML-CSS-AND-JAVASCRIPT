@@ -21,6 +21,7 @@ myObj.greeting = function () {
 
 myObj.greetName = function () {
   console.log(`hello ${myObj["name"]}`); // based on string interpolation
+  console.log(`hello ${this.name}`); // based on string interpolation
 };
 
 myObj.greeting(); // call the function variable
