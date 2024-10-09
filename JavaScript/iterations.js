@@ -44,3 +44,14 @@ v.forEach((item) => {
   console.log(item.toUpperCase());
 });
 console.log(v);
+
+function names(item) {
+  console.log(item);
+}
+
+v.forEach(names); // reference another function also works
+
+// item, index and the whole array are passed in each time of the for each loop
+v.forEach((item, index, arr) => {
+  console.log(item, index, arr);
+});
