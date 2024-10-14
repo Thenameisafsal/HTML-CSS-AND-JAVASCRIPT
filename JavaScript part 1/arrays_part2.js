@@ -22,3 +22,6 @@ let a = 10;
 let b = 5;
 let c = 9;
 console.log(Array.of(a, b, c)); // creates a nwe array
+
+let g = [1, 2, 3];
+console.log(g[g.length - 1]);
