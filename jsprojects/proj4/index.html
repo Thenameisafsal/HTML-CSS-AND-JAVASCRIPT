@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Guess the number</title>
+    <style>
+      .heading {
+        color: white;
+        text-align: center;
+        background-color: black;
+      }
+      .content {
+        color: white;
+        text-align: center;
+      }
+      .large {
+        padding: 20px;
+        color: white;
+        font-weight: 500;
+        font-size: xx-large;
+        text-align: center;
+      }
+      .inputs {
+        display: flex;
+        justify-content: center;
+      }
+      .xinput:hover {
+        transition-duration: 1s;
+        border-color: aqua;
+        border-radius: 10px;
+        border: 15px;
+        box-shadow: aquamarine;
+      }
+      .button {
+        border-radius: 10px;
+        background-color: black;
+        color: white;
+      }
+      .inp {
+        display: flex;
+        justify-content: center;
+        padding: 5px;
+      }
+      .inputs {
+        padding: 20px;
+      }
+      .stats {
+        text-align: center;
+        padding: 10px;
+        color: white;
+      }
+    </style>
+  </head>
+  <body style="background-color: rgb(109, 107, 107)">
+    <div class="heading">
+      <h1>Number guessing game</h1>
+    </div>
+    <div class="content">
+      <h4>
+        Try and guess a random number between 1 and 100. You have 10 attempts to
+        guess.
+      </h4>
+    </div>
+    <div class="large">Guess a number</div>
+    <div class="inputs">
+      <input class="xinput" type="text" />
+    </div>
+    <div class="inp">
+      <button class="button" onclick="f()">Submit guess</button>
+    </div>
+    <div class="stats">
+      <div class="prev">
+        Previous guesses:
+        <div class="prev_count">0</div>
+      </div>
+      <div class="rem">
+        Guesses Remaining:
+        <div class="rem_count">10</div>
+      </div>
+    </div>
+  </body>
+  <script>
+    function f() {
+      const v = document.querySelector(".xinput").value;
+      const ran = parseInt(Math.random() * 10);
+      if (v == null || v == "" || v == undefined) {
+        console.log("no value detected");
+        return;
+      }
+      if (v == ran) {
+        console.log("you got it");
+      } else {
+        console.log("nah try again");
+        const prev = document.querySelector(".prev_count");
+        const rem = document.querySelector(".rem_count");
+        prev.innerHTML = parseInt(prev.textContent) + 1;
+        rem.innerHTML = parseInt(rem.textContent) - 1;
+      }
+      const prev = document.querySelector(".prev_count");
+      const rem = document.querySelector(".rem_count");
+      if (parseInt(prev.textContent) == 0 || parseInt(rem.textContent) == 0) {
+        alert("you've reached your limit");
+        prev.textContent = 0;
+        rem.textContent = 10;
+      }
+    }
+  </script>
+</html>
