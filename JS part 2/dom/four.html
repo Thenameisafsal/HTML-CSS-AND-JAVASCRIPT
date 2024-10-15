@@ -19,5 +19,32 @@
     }
     addLanguage("python");
     addLanguage("java");
+
+    function optimalAddLanguage(lang) {
+      const li = document.createElement("li");
+      li.appendChild(document.createTextNode(lang));
+      document.querySelector(".language").appendChild(li);
+    }
+    optimalAddLanguage("javascript");
+
+    // edit added values
+    const secondLang = document.querySelector("li:nth-child(2)");
+    console.log(secondLang);
+    // secondLang.innerHTML = "Mojo"; -> inefficient method
+    const newli = document.createElement("li");
+    newli.textContent = "Golang";
+    secondLang.replaceWith(newli);
+    // can be modified with this also:
+    // secondLang.outerHTML = '<li>language</li>'
+
+    // edit 3rd value
+    const thirdLang = document.querySelector("li:nth-child(2)");
+    const newv = document.createElement("li");
+    newv.textContent = "react";
+    thirdLang.replaceWith(newv);
+
+    // remove a value
+    const list = document.querySelector("li");
+    list.remove(document.querySelector("li:first-child"));
   </script>
 </html>
