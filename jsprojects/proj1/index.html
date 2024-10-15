@@ -56,5 +56,15 @@
     const changer = function (color) {
       document.body.style.backgroundColor = color;
     };
+    // another way would be:
+    const buttons = document.querySelectorAll("button"); // get all buttons
+    buttons.forEach(function (button) {
+      console.log(button);
+      button.addEventListener("click", function (e) {
+        console.log(e);
+        console.log(e.target);
+        // then modify color logic
+      });
+    });
   </script>
 </html>
