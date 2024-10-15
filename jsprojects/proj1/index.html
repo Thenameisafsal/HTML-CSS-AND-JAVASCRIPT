@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Color Scheme Switcher</title>
+    <style>
+      .heading {
+        padding-top: 50px;
+        display: flex;
+        justify-content: center;
+        font-weight: 700;
+      }
+      button {
+        height: 30px;
+        width: 30px;
+        display: inline-block;
+        padding: 4px;
+      }
+      .boxline {
+        display: flex;
+        justify-content: center;
+        padding: 4px;
+      }
+      .text {
+        font-weight: 700;
+        display: flex;
+        justify-content: center;
+        text-align: center;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="heading">Color Scheme Switcher</div>
+    <div class="line">
+      <div class="boxline">
+        <button class="box" style="background-color: blue" id="blue"
+        onclick=changer("blue")> <button class="box" style="background-color:
+        red" id="red" onclick=changer("red")> <button class="box"
+        style="background-color: green" id="green" onclick=changer("green")>
+      </div>
+      <div class="boxline">
+        <button class="box" style="background-color: white)" id="white"
+        onclick=changer("white")> <button class="box" style="background-color:
+        yellowgreen" id="yellowgreen" onclick=changer("yellowgreen")> <button
+        class="box" style="background-color: orange" id="orange"
+        onclick=changer("orange")>
+      </div>
+    </div>
+    <div class="text">
+      Try clicking on one of the colors above to change background color of the
+      page.
+    </div>
+  </body>
+  <script>
+    const changer = function (color) {
+      document.body.style.backgroundColor = color;
+    };
+  </script>
+</html>
