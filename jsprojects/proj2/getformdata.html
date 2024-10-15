@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>BMI calculator</title>
+    <style>
+      .heading {
+        font-weight: 700;
+        padding: 20px;
+      }
+      div {
+        padding: 20px;
+      }
+      .calculate {
+        display: flex;
+        justify-content: center;
+      }
+
+      button {
+        border-radius: 10px;
+      }
+      .desc {
+        display: flex;
+        justify-content: center;
+      }
+    </style>
+  </head>
+  <body>
+    <form>
+      <div class="heading">BMI Calculator</div>
+      <div class="height-input">
+        Height in cms: <input type="text" id="heightcm" />
+      </div>
+      <div class="weight">
+        Weight in kgs:
+        <input type="text" id="weightkg" />
+      </div>
+      <div class="calculate">
+        <button type="button" onclick="calc()">Calculate</button>
+      </div>
+      <div class="all-desc">
+        <div class="desc">bmi weight guide</div>
+        <center>
+          <div class="items">
+            <p>under weight = less than 18.6</p>
+          </div>
+          <div class="items">
+            <p>normal range = 18.6 to 24.9</p>
+          </div>
+          <div class="items">
+            <p>overweight = greater than 24.9</p>
+          </div>
+        </center>
+      </div>
+    </form>
+  </body>
+  <script>
+    function calc() {
+      const form = document.querySelector("form");
+      form.addEventListener("click", function () {
+        const h = parseInt(document.querySelector("#heightcm").value);
+        const w = parseInt(document.querySelector("#weightkg").value);
+        console.log(w / (h / 100) ** 2);
+      });
+    }
+  </script>
+</html>
