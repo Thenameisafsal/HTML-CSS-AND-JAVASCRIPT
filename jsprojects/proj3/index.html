@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Digital Clock</title>
+    <style>
+      .content {
+        display: flex;
+        justify-content: center;
+        color: white;
+      }
+      #clock {
+        width: 120px;
+        border-radius: 10px;
+        height: 30px;
+        background-color: orange;
+        text-align: center;
+        color: white;
+        font-size: x-large;
+      }
+    </style>
+  </head>
+  <body style="background-color: #212121">
+    <center>
+      <div class="g">
+        <div class="content">Your local time</div>
+        <div id="clock">
+          <div style="height: 200px; width: 200px"></div>
+        </div>
+      </div>
+    </center>
+  </body>
+  <script>
+    const v = document.getElementById("clock");
+    // auto update time every second
+    setInterval(function () {
+      let date = new Date();
+      //   console.log(date.toLocaleTimeString());
+      v.innerHTML = date.toLocaleTimeString();
+    }, 1000); // auto update time
+  </script>
+</html>
