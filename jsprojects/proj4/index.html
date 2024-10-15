@@ -50,6 +50,10 @@
         padding: 10px;
         color: white;
       }
+      .res {
+        color: white;
+        text-align: center;
+      }
     </style>
   </head>
   <body style="background-color: rgb(109, 107, 107)">
@@ -79,19 +83,23 @@
         <div class="rem_count">10</div>
       </div>
     </div>
+    <div class="res"></div>
   </body>
   <script>
     function f() {
       const v = document.querySelector(".xinput").value;
       const ran = parseInt(Math.random() * 10);
+      const res = document.querySelector(".res");
       if (v == null || v == "" || v == undefined) {
         console.log("no value detected");
         return;
       }
       if (v == ran) {
         console.log("you got it");
+        res.innerHTML = "you got it";
       } else {
         console.log("nah try again");
+        res.innerHTML = "nah try again!";
         const prev = document.querySelector(".prev_count");
         const rem = document.querySelector(".rem_count");
         prev.innerHTML = parseInt(prev.textContent) + 1;
