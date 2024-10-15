@@ -54,6 +54,10 @@
         color: white;
         text-align: center;
       }
+      .restart {
+        background-color: black;
+        color: white;
+      }
     </style>
   </head>
   <body style="background-color: rgb(109, 107, 107)">
@@ -84,6 +88,9 @@
       </div>
     </div>
     <div class="res"></div>
+    <div class="options">
+      <button class="restart" onclick="restart()">Restart</button>
+    </div>
   </body>
   <script>
     function f() {
@@ -112,6 +119,18 @@
         prev.textContent = 0;
         rem.textContent = 10;
       }
+    }
+
+    function restart() {
+      alert("You're going to restart");
+      const prev = document.querySelector(".prev_count");
+      const rem = document.querySelector(".rem_count");
+      prev.textContent = 0;
+      rem.textContent = 10;
+      const res = document.querySelector(".res");
+      res.innerHTML = "";
+      const userinput = document.querySelector(".xinput");
+      userinput.value = "";
     }
   </script>
 </html>
