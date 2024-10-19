@@ -30,6 +30,9 @@
       "click",
       function (e) {
         console.log(e);
+        console.log(e.target);
+        console.log(e.target.parentNode); // .remove() to remove the clicked element
+        // .tagName to get the tag name of the clicked element
         // e.stopPropagation(); // stops the event from bubbling up
         // you get a pointer event object as result, it has a lot of properties
       },
