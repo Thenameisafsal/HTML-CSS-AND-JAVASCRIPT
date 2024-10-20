@@ -7,7 +7,7 @@
   </head>
   <body>
     <h1>Hello</h1>
-    <button id="btn">Hey</button>
+    <button id="btn">stop the interval</button>
   </body>
   <script>
     // executes after 2 seconds - only once
@@ -22,5 +22,21 @@
       console.log("hey bub!");
     }
     setTimeout(pr, 1500);
+    function f() {
+      const h1 = document.querySelector("h1");
+      h1.innerHTML = "acersense is good";
+    }
+    setTimeout(f, 1000);
+    const event = function () {
+      console.log("interval");
+    };
+    const interval = setInterval(event, 1000);
+    // changes after 1 second
+    const button = document.getElementById("btn");
+    button.addEventListener("click", function () {
+      clearInterval(interval);
+      // stop the interval event
+      console.log("stopped");
+    });
   </script>
 </html>
