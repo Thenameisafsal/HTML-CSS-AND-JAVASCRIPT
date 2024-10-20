@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document Color Changer</title>
+  </head>
+  <body style="background-color: #212121">
+    <button id="start">start</button>
+    <button id="stop">stop</button>
+  </body>
+  <script>
+    const body = document.querySelector("body");
+    var colors = [
+      "red",
+      "green",
+      "blue",
+      "yellow",
+      "purple",
+      "orange",
+      "pink",
+      "brown",
+      "black",
+      "white",
+      "gray",
+    ];
+    var ptr = 0;
+    var interval;
+    document.querySelector("#start").addEventListener("click", function () {
+      interval = setInterval(function () {
+        ptr = (ptr + 1) % colors.length;
+        body.style.backgroundColor = colors[ptr];
+      }, 1000);
+    });
+    document.querySelector("#stop").addEventListener("click", function () {
+      clearInterval(interval);
+    });
+  </script>
+</html>
