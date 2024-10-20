@@ -9,6 +9,8 @@
     <h1>Hello</h1>
     <button id="start">start</button>
     <button id="stop">stop</button>
+    <button id="start1">start1</button>
+    <button id="stopper">stop1</button>
   </body>
   <script>
     // start and stop the interval event
@@ -22,6 +24,23 @@
     document.querySelector("#stop").addEventListener("click", function () {
       clearInterval(event);
       console.log("stopped");
+    });
+
+    // print any given string
+    const fun = function (str) {
+      console.log(str, Date.now());
+    };
+    var startEvent;
+    const intervalStart = document
+      .querySelector("#start1")
+      .addEventListener("click", function () {
+        startEvent = setInterval(fun, 1000, "nigga!");
+        console.log("started");
+      });
+
+    document.querySelector("#stopper").addEventListener("click", function () {
+      console.log("stopped");
+      clearInterval(startEvent);
     });
   </script>
 </html>
