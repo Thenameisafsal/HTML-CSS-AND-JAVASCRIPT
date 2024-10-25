@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Sending requests</title>
+  </head>
+  <body>
+    loading
+  </body>
+  <script>
+    let xhr = new XMLHttpRequest();
+    xhr.open("GET", "https://api.github.com/users/Thenameisafsal");
+    xhr.onreadystatechange = function () {
+      console.log("state change detected");
+      console.log(xhr.status);
+      if (xhr.readyState === 4) {
+        console.log(this.responseText);
+        const data = JSON.parse(this.responseText);
+        console.log(typeof data.followers);
+        console.log(data.followers);
+        console.log(data);
+      }
+    };
+    xhr.send();
+  </script>
+</html>
