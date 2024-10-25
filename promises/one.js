@@ -52,4 +52,8 @@ new Promise(function (resolve, reject) {
   })
   .catch((error) => {
     console.log(error);
+  })
+  .finally(function () {
+    console.log("promise ends here");
   });
+//   finally is executed in the end
