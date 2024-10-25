@@ -30,3 +30,26 @@ const promiseThree = new Promise(function (resolve, reject) {
 promiseThree.then(function (user) {
   console.log(user);
 });
+
+// access return value from promise through another then() => can be chained as per requirement
+// also add catch() ar end to handle any rejections etc.
+
+new Promise(function (resolve, reject) {
+  let error = false;
+  if (!error) {
+    resolve({ user: "afsal", isCoder: true });
+  } else {
+    reject("something went wrong dude!");
+  }
+})
+  .then(function (user) {
+    console.log(user);
+    return user.user;
+    // accept the value in then()
+  })
+  .then((username) => {
+    console.log(username);
+  })
+  .catch((error) => {
+    console.log(error);
+  });
