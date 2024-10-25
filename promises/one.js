@@ -34,7 +34,7 @@ promiseThree.then(function (user) {
 // access return value from promise through another then() => can be chained as per requirement
 // also add catch() ar end to handle any rejections etc.
 
-new Promise(function (resolve, reject) {
+const promiseFour = new Promise(function (resolve, reject) {
   let error = false;
   if (!error) {
     resolve({ user: "afsal", isCoder: true });
@@ -57,3 +57,16 @@ new Promise(function (resolve, reject) {
     console.log("promise ends here");
   });
 //   finally is executed in the end
+
+// async-await syntax of same above code
+
+async function promise4() {
+  try {
+    const promise = await promiseFour; // get the promise
+    console.log(promise);
+  } catch (err) {
+    console.log(err);
+  }
+}
+
+promise4();
