@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Keyboard Checker</title>
+  </head>
+  <body>
+    <p id="insert">Press any key and see.</p>
+  </body>
+  <script>
+    const ele = document.getElementById("insert");
+    const key = window.addEventListener("keydown", function (e) {
+      ele.innerHTML = `
+    <table style="border:2px solid">
+    <tr>
+    <td>Key</td>
+    <td>Value</td>
+    <td>Code</td>
+    </tr>
+    <tr>
+    <td>${e.keyCode === 32 ? "space" : e.key}</td>
+    <td>${e.keyCode}</td>
+    <td>${e.code}</td>
+    </tr>
+    </table>
+    `;
+    });
+  </script>
+</html>
