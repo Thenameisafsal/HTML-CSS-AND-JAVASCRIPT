@@ -70,3 +70,27 @@ async function promise4() {
 }
 
 promise4();
+
+async function promise5() {
+  try {
+    const response = await fetch("https://api.github.com/users/Thenameisafsal");
+    const result = await response.json();
+    console.log(result);
+  } catch (e) {
+    console.log("error", e);
+  }
+}
+promise5();
+
+// fetch in try catch syntax
+fetch("https://api.github.com/users/Thenameisafsal")
+  .then((response) => {
+    console.log("result parsing to json");
+    return response.json();
+  })
+  .then((response) => {
+    console.log("response parse complete", response);
+  })
+  .catch((err) => {
+    console.log("an error occurred", err);
+  });
