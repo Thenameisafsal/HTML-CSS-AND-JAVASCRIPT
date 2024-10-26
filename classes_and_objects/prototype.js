@@ -30,3 +30,6 @@ const tech = {
 // tech is inherited by teacher now. so you can access the properties
 teacher.__proto__ = tech;
 console.log(`my tech stack is ${teacher.language}`);
+
+// new syntax for the same is:
+Object.setPrototypeOf(teacher, tech); // sets teacher to inherit tech
