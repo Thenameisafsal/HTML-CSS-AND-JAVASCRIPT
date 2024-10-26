@@ -11,3 +11,4 @@ class o {
 
 let guy = new o("afsal", 23);
 guy.what();
+console.log(guy.constructor);
