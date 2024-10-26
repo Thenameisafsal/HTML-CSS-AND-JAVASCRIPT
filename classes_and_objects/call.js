@@ -1,5 +1,6 @@
-function setUserName(username) {
-  this.username = username;
+function setUserName(name) {
+  this.name = name;
+  //   console.log("called");
 }
 
 function create(name, email, password) {
@@ -9,3 +10,6 @@ function create(name, email, password) {
   this.email = email;
   this.password = password;
 }
+
+const obj = new create("afsal", "afsal", "123");
+console.log(obj);
