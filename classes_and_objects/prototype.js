@@ -14,3 +14,19 @@ Object.prototype.afsal = function () {
 
 const d = 5;
 d.afsal();
+
+arr = [1, 2, 3, 4, 5];
+arr.afsal();
+
+// prototype inheritance
+// this is implemented using __proto__
+
+const teacher = {
+  name: "afsal",
+};
+const tech = {
+  language: "golang",
+};
+// tech is inherited by teacher now. so you can access the properties
+teacher.__proto__ = tech;
+console.log(`my tech stack is ${teacher.language}`);
