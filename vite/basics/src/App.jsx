@@ -8,7 +8,7 @@ function App() {
       <div>
 <p>vite</p>       
 <p>vite</p>      
-<Youtube/>  {/* imported from another jsx */}
+<Youtube/>  {/* imported from another jsx, calling the component */}
       </div>
     </>
   )
