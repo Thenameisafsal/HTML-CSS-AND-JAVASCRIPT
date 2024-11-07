@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Parent Child Components</title>
+    <script src="https://unpkg.com/react@18/umd/react.development.js"></script>
+    <script src="https://unpkg.com/react-dom@18/umd/react-dom.development.js"></script>
+    <!-- Load Babel for JSX transformation -->
+    <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+  </head>
+  <body>
+    <div id="root"></div>
+    <script type="text/babel">
+      const Header = function () {
+        return <h1>this is my heading</h1>;
+      };
+      const Content = function () {
+        return <p>this is my content</p>;
+      };
+      const Footer = function () {
+        return <h3>There goes the footer</h3>;
+      };
+      const Component1 = function () {
+        return (
+          <div>
+            <Header />
+            <Content />
+            <Footer />
+          </div>
+        );
+      };
+
+      ReactDOM.render(<Component1 />, document.getElementById("root"));
+    </script>
+  </body>
+</html>
