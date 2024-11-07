@@ -6,12 +6,14 @@
     <script src="https://unpkg.com/react-dom@18/umd/react-dom.development.js"></script>
     <!-- Load Babel for JSX transformation -->
     <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+    <link rel="stylesheet" href="./styles.css" />
   </head>
   <body>
     <div id="root"></div>
     <script type="text/babel">
       const Component = function () {
-        return <h1>Yeah now i get it</h1>;
+        return <h1 className="class-name">Yeah now i get it</h1>;
+        // this className will be accessed using .class-name  or whatever name you specify in the css -> primarily for the styling purposes
       };
       // define component - first letter always caps
       ReactDOM.render(<Component />, document.getElementById("root"));
