@@ -17,7 +17,13 @@
         return (
           <div>
             <h1>Question: {prop.question}</h1>
-            <h1>Reply: {prop.punchline}</h1>
+            <h1
+              style={{
+                backgroundColor: prop.question == undefined ? "red" : "green",
+              }}
+            >
+              Reply: {prop.punchline}
+            </h1>
             <h2
               style={{ display: prop.question == undefined ? "block" : "none" }}
             >
