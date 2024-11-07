@@ -13,11 +13,19 @@
     <div id="root"></div>
     <script type="text/babel">
       const Joke = function (prop) {
+        console.log(prop.question);
         return (
           <div>
             <h1>Question: {prop.question}</h1>
             <h1>Reply: {prop.punchline}</h1>
+            <h2
+              style={{ display: prop.question == undefined ? "block" : "none" }}
+            >
+              Conditional render statement that displays only if the question is
+              null, so pass in the question now
+            </h2>
           </div>
+          // the above line is conditional rendering now
         );
       };
 
