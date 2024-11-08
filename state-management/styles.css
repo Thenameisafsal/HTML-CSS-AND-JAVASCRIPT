@@ -1,0 +1,26 @@
+#root{
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    vertical-align: 50%;
+    padding-top: 25%;
+    
+}
+
+#displayval{
+    font-size: 100px;
+    color: red;
+}
+
+button{
+    border-radius: 10px;
+    padding: 6px;
+    margin: 2px;
+    background-color: aqua;
+    transition-duration: 1s;
+}
+
+button:hover{
+    background-color: white;
+}
